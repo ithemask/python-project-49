@@ -6,6 +6,8 @@ def run(game):
         from .games.even import task, get_question, get_correct_answer
     elif game == 'calc':
         from .games.calc import task, get_question, get_correct_answer
+    elif game == 'gcd':
+        from .games.gcd import task, get_question, get_correct_answer
     print('Welcome to the Brain Games!')
     username = prompt.string('May I have your name? ')
     print(f'Hello, {username}!')
