@@ -3,19 +3,19 @@ import prompt
 
 def run(game):
     if game == 'even':
-        from .games.even import task, get_question, get_correct_answer
+        from .games.even import TASK, get_question, get_correct_answer
     elif game == 'calc':
-        from .games.calc import task, get_question, get_correct_answer
+        from .games.calc import TASK, get_question, get_correct_answer
     elif game == 'gcd':
-        from .games.gcd import task, get_question, get_correct_answer
+        from .games.gcd import TASK, get_question, get_correct_answer
     elif game == 'progression':
-        from .games.progression import task, get_question, get_correct_answer
+        from .games.progression import TASK, get_question, get_correct_answer
     elif game == 'prime':
-        from .games.prime import task, get_question, get_correct_answer
+        from .games.prime import TASK, get_question, get_correct_answer
     print('Welcome to the Brain Games!')
     username = prompt.string('May I have your name? ')
     print(f'Hello, {username}!')
-    print(task)
+    print(TASK)
     tries = 3
     while tries:
         question = get_question()
