@@ -5,7 +5,6 @@ description = "A set of Brain Games"
 authors = ["ithemask <ai77xxxx@gmail.com>"]
 repository = "git@github.com:ithemask/python-project-49.git"
 readme = "README.md"
-requires-python = ">=3.10"
 classifiers = [
     "Programming Language :: Python :: 3.10",
     "License :: Freely Distributable",
