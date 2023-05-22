@@ -1,6 +1,9 @@
 import prompt
 
 
+TRIES_TO_WIN = 3
+
+
 def run(game):
     if game == 'even':
         from .games.even import TASK, get_question, get_correct_answer
@@ -16,8 +19,8 @@ def run(game):
     username = prompt.string('May I have your name? ')
     print(f'Hello, {username}!')
     print(TASK)
-    tries = 3
-    while tries:
+    tries_left = TRIES_TO_WIN
+    while tries_left:
         question = get_question()
         print(f'Question: {question}')
         answer = prompt.string('Your answer: ')
@@ -27,6 +30,6 @@ def run(game):
                   f"was '{correct_answer}'.\nLet's try again, {username}!")
             break
         print('Correct!')
-        tries -= 1
-    if tries == 0:
+        tries_left -= 1
+    if tries_left == 0:
         print(f'Congratulations, {username}!')

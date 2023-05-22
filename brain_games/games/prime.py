@@ -2,11 +2,13 @@ import random
 
 
 TASK = 'Answer "yes" if given number is prime. Otherwise answer "no".'
+RANGE_START = 0
+RANGE_END = 99
 
 
 def get_question():
     # get random number
-    return random.randint(0, 99)
+    return random.randint(RANGE_START, RANGE_END)
 
 
 def get_correct_answer(question):
