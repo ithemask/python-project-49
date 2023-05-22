@@ -3,12 +3,14 @@ from math import gcd
 
 
 TASK = 'Find the greatest common divisor of given numbers.'
+RANGE_START = 0
+RANGE_END = 99
 
 
 def get_question():
     # get random numbers
-    num_1 = random.randint(0, 99)
-    num_2 = random.randint(0, 99)
+    num_1 = random.randint(RANGE_START, RANGE_END)
+    num_2 = random.randint(RANGE_START, RANGE_END)
     return f'{num_1} {num_2}'
 
 

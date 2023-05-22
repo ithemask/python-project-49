@@ -2,13 +2,17 @@ import random
 
 
 TASK = 'What number is missing in the progression?'
+LEN_RANGE_START = 5
+LEN_RANGE_END = 10
+NUM_RANGE_START = 0
+NUM_RANGE_END = 99
 
 
 def get_question():
     # get random progression with missing number
-    init_len = random.randint(5, 10)
-    start = random.randint(0, 99 - init_len)
-    stop = random.randint(start + init_len, 99)
+    init_len = random.randint(LEN_RANGE_START, LEN_RANGE_END)
+    start = random.randint(NUM_RANGE_START, NUM_RANGE_END - init_len)
+    stop = random.randint(start + init_len, NUM_RANGE_END)
     step = int((stop - start) / init_len)
     progr = list()
     for num in range(start, stop, step):
