@@ -1,7 +1,7 @@
 import random
 
 
-task = 'What is the result of the expression?'
+TASK = 'What is the result of the expression?'
 
 
 def get_question():
