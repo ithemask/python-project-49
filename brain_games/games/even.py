@@ -6,13 +6,12 @@ RANGE_START = 0
 RANGE_END = 99
 
 
-def get_question():
+def get_ques_and_answ():
     # get random number
-    return random.randint(RANGE_START, RANGE_END)
-
-
-def get_correct_answer(question):
+    question = random.randint(RANGE_START, RANGE_END)
     # is even number
     if question % 2 == 0:
-        return 'yes'
-    return 'no'
+        answer = 'yes'
+    else:
+        answer = 'no'
+    return (question, answer)

@@ -8,7 +8,7 @@ NUM_RANGE_START = 0
 NUM_RANGE_END = 99
 
 
-def get_question():
+def get_ques_and_answ():
     # get random progression with missing number
     init_len = random.randint(LEN_RANGE_START, LEN_RANGE_END)
     start = random.randint(NUM_RANGE_START, NUM_RANGE_END - init_len)
@@ -21,10 +21,7 @@ def get_question():
         progr.append(str(num))
     final_len = len(progr)
     progr[random.randint(0, final_len) - 1] = '..'
-    return ' '.join(progr)
-
-
-def get_correct_answer(question):
+    question = ' '.join(progr)
     # get missing number
     progr = question.split(' ')
     for i, elem in enumerate(progr):
@@ -33,4 +30,5 @@ def get_correct_answer(question):
                 miss_num = int(progr[i - 1]) * 2 - int(progr[i - 2])
             else:
                 miss_num = int(progr[i + 1]) * 2 - int(progr[i + 2])
-            return str(miss_num)
+            answer = str(miss_num)
+    return (question, answer)

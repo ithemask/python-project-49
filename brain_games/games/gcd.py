@@ -7,14 +7,12 @@ RANGE_START = 0
 RANGE_END = 99
 
 
-def get_question():
+def get_ques_and_answ():
     # get random numbers
     num_1 = random.randint(RANGE_START, RANGE_END)
     num_2 = random.randint(RANGE_START, RANGE_END)
-    return f'{num_1} {num_2}'
-
-
-def get_correct_answer(question):
+    question = f'{num_1} {num_2}'
     # get greatest common divisor
     num_pair = question.split(' ')
-    return str(gcd(int(num_pair[0]), int(num_pair[1])))
+    answer = str(gcd(int(num_pair[0]), int(num_pair[1])))
+    return (question, answer)
