@@ -13,6 +13,5 @@ def get_ques_and_answ():
     num_2 = random.randint(RANGE_START, RANGE_END)
     question = f'{num_1} {num_2}'
     # get greatest common divisor
-    num_pair = question.split(' ')
-    answer = str(gcd(int(num_pair[0]), int(num_pair[1])))
+    answer = str(gcd(num_1, num_2))
     return (question, answer)
