@@ -16,19 +16,13 @@ def get_ques_and_answ():
     step = int((stop - start) / init_len)
     progr = list()
     for num in range(start, stop, step):
-        if len(progr) == 10:
+        if len(progr) == LEN_RANGE_END:
             break
         progr.append(str(num))
     final_len = len(progr)
-    progr[random.randint(0, final_len) - 1] = '..'
+    miss_num_i = random.randint(0, final_len - 1)
+    miss_num = progr[miss_num_i]
+    progr[miss_num_i] = '..'
     question = ' '.join(progr)
-    # get missing number
-    progr = question.split(' ')
-    for i, elem in enumerate(progr):
-        if elem == '..':
-            if i > 1:
-                miss_num = int(progr[i - 1]) * 2 - int(progr[i - 2])
-            else:
-                miss_num = int(progr[i + 1]) * 2 - int(progr[i + 2])
-            answer = str(miss_num)
+    answer = str(miss_num)
     return (question, answer)
