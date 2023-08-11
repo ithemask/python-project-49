@@ -27,8 +27,7 @@ def run(game):
         if answer != ques_and_answ[1]:
             print(f"'{answer}' is wrong answer ;(. Correct answer "
                   f"was '{ques_and_answ[1]}'.\nLet's try again, {username}!")
-            break
+            return
         print('Correct!')
         tries_left -= 1
-    if tries_left == 0:
-        print(f'Congratulations, {username}!')
+    print(f'Congratulations, {username}!')
