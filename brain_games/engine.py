@@ -5,20 +5,10 @@ TRIES_TO_WIN = 3
 
 
 def run(game):
-    if game == 'even':
-        from .games.even import TASK, get_ques_and_answ
-    elif game == 'calc':
-        from .games.calc import TASK, get_ques_and_answ
-    elif game == 'gcd':
-        from .games.gcd import TASK, get_ques_and_answ
-    elif game == 'progression':
-        from .games.progression import TASK, get_ques_and_answ
-    elif game == 'prime':
-        from .games.prime import TASK, get_ques_and_answ
+    exec(f'from .games.{game} import TASK, get_ques_and_answ', globals())
     print('Welcome to the Brain Games!')
     username = prompt.string('May I have your name? ')
-    print(f'Hello, {username}!')
-    print(TASK)
+    print(f'Hello, {username}!\n{TASK}')
     tries_left = TRIES_TO_WIN
     while tries_left:
         ques_and_answ = get_ques_and_answ()
