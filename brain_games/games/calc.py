@@ -13,5 +13,10 @@ def get_question_and_answer():
     operation = random.choice(['+', '-', '*'])
     question = f'{num_1} {operation} {num_2}'
     # get correct result
-    answer = str(eval(question))
-    return (question, answer)
+    if operation == '+':
+        answer = num_1 + num_2
+    elif operation == '-':
+        answer = num_1 - num_2
+    else:
+        answer = num_1 * num_2
+    return (question, str(answer))
