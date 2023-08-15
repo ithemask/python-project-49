@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-from .. import engine
+from brain_games import engine
 
 
 def main():
