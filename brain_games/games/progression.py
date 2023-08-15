@@ -2,7 +2,7 @@ import random
 
 
 def get_task():
-    TASK = 'What number is missing in the progression?'
+    return 'What number is missing in the progression?'
 
 
 LEN_RANGE_START = 5
