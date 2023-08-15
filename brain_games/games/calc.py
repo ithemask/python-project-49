@@ -6,7 +6,7 @@ RANGE_START = 0
 RANGE_END = 20
 
 
-def get_ques_and_answ():
+def get_question_and_answer():
     # get random expression
     num_1 = random.randint(RANGE_START, RANGE_END)
     num_2 = random.randint(RANGE_START, RANGE_END)

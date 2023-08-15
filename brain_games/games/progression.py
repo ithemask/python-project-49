@@ -8,7 +8,7 @@ NUM_RANGE_START = 0
 NUM_RANGE_END = 99
 
 
-def get_ques_and_answ():
+def get_question_and_answer():
     # get random progression with missing number
     init_len = random.randint(LEN_RANGE_START, LEN_RANGE_END)
     start = random.randint(NUM_RANGE_START, NUM_RANGE_END - init_len)
