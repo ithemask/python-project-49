@@ -1,7 +1,10 @@
 import random
 
 
-TASK = 'What number is missing in the progression?'
+def get_task():
+    TASK = 'What number is missing in the progression?'
+
+
 LEN_RANGE_START = 5
 LEN_RANGE_END = 10
 NUM_RANGE_START = 0

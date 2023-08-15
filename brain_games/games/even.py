@@ -1,15 +1,18 @@
 import random
 
 
-TASK = 'Answer "yes" if the number is even, otherwise answer "no".'
-RANGE_START = 0
-RANGE_END = 99
+def get_task():
+    return 'Answer "yes" if the number is even, otherwise answer "no".'
 
 
 def is_even(number):
     if number % 2 == 0:
         return True
     return False
+
+
+RANGE_START = 0
+RANGE_END = 99
 
 
 def get_question_and_answer():

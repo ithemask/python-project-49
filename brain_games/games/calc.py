@@ -1,7 +1,10 @@
 import random
 
 
-TASK = 'What is the result of the expression?'
+def get_task():
+    return 'What is the result of the expression?'
+
+
 RANGE_START = 0
 RANGE_END = 20
 
