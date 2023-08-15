@@ -1,15 +1,15 @@
 import prompt
 
 
-TRIES_TO_WIN = 3
+ROUNDS_COUNT = 3
 
 
 def run(game):
     print('Welcome to the Brain Games!')
     username = prompt.string('May I have your name? ')
     print(f'Hello, {username}!\n{game.get_task()}')
-    tries_left = TRIES_TO_WIN
-    while tries_left:
+    rounds_left = ROUNDS_COUNT
+    while rounds_left:
         question_and_answer = game.get_question_and_answer()
         print(f'Question: {question_and_answer[0]}')
         answer = prompt.string('Your answer: ')
@@ -19,5 +19,5 @@ def run(game):
                   f"Let's try again, {username}!")
             return
         print('Correct!')
-        tries_left -= 1
+        rounds_left -= 1
     print(f'Congratulations, {username}!')
