@@ -5,7 +5,7 @@ from math import gcd
 def get_task():
     return 'Find the greatest common divisor of given numbers.'
 
-    
+
 RANGE_START = 0
 RANGE_END = 99
 
