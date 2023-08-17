@@ -1,12 +1,12 @@
 import random
 
 
-def get_task():
-    return 'What is the result of the expression?'
-
-
 RANGE_START = 0
 RANGE_END = 20
+
+
+def get_task():
+    return 'What is the result of the expression?'
 
 
 def get_question_and_answer():

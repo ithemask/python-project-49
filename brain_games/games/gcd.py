@@ -2,12 +2,12 @@ import random
 from math import gcd
 
 
-def get_task():
-    return 'Find the greatest common divisor of given numbers.'
-
-
 RANGE_START = 0
 RANGE_END = 99
+
+
+def get_task():
+    return 'Find the greatest common divisor of given numbers.'
 
 
 def get_question_and_answer():
