@@ -11,21 +11,19 @@ def get_task():
     return 'What number is missing in the progression?'
 
 
+def get_progression():
+    length = random.randint(LEN_RANGE_START, LEN_RANGE_END)
+    start = random.randint(NUM_RANGE_START, NUM_RANGE_END - length)
+    stop = random.randint(start + length, NUM_RANGE_END)
+    step = int((stop - start) / length)
+    return list(map(str, range(start, stop, step)))[:length]
+
+
 def get_question_and_answer():
-    # get random progression with missing number
-    init_len = random.randint(LEN_RANGE_START, LEN_RANGE_END)
-    start = random.randint(NUM_RANGE_START, NUM_RANGE_END - init_len)
-    stop = random.randint(start + init_len, NUM_RANGE_END)
-    step = int((stop - start) / init_len)
-    progr = list()
-    for num in range(start, stop, step):
-        if len(progr) == LEN_RANGE_END:
-            break
-        progr.append(str(num))
-    final_len = len(progr)
-    miss_num_i = random.randint(0, final_len - 1)
-    miss_num = progr[miss_num_i]
-    progr[miss_num_i] = '..'
-    question = ' '.join(progr)
+    progression = get_progression()
+    miss_num_i = random.randint(0, len(progression) - 1)
+    miss_num = progression[miss_num_i]
+    progression[miss_num_i] = '..'
+    question = ' '.join(progression)
     answer = str(miss_num)
     return (question, answer)
