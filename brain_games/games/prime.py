@@ -10,22 +10,13 @@ def get_task():
 
 
 def is_prime(number):
-    # is prime number (using 'Sieve of Eratosthenes' algorithm)
     if number < 2:
         return False
-    sequence = list(range(2, number + 1))
-    prime_div_i = 0
-    prime_div = sequence[prime_div_i]
-    while prime_div ** 2 <= number:
-        for i, elem in enumerate(sequence):
-            if elem != prime_div and elem % prime_div == 0:
-                sequence.pop(i)
-        prime_div_i += 1
-        prime_div = sequence[prime_div_i]
-    if number in sequence:
-        return True
-    else:
-        return False
+    for divisor in range(2, number + 1):
+        if divisor ** 2 <= number:
+            if number % divisor == 0:
+                return False
+    return True
 
 
 def get_question_and_answer():
