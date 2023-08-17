@@ -20,6 +20,6 @@ def get_question_and_answer():
         answer = num_1 + num_2
     elif operation == '-':
         answer = num_1 - num_2
-    else:
+    elif operation == '*':
         answer = num_1 * num_2
     return (question, str(answer))
