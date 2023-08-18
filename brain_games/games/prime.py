@@ -12,10 +12,9 @@ def get_task():
 def is_prime(number):
     if number < 2:
         return False
-    for divisor in range(2, number + 1):
-        if divisor ** 2 <= number:
-            if number % divisor == 0:
-                return False
+    for divisor in range(2, int(number ** 0.5) + 1):
+        if number % divisor == 0:
+            return False
     return True
 
 
