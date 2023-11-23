@@ -11,10 +11,8 @@ def get_task():
 
 
 def get_question_and_answer():
-    # get random numbers
     num_1 = random.randint(RANGE_START, RANGE_END)
     num_2 = random.randint(RANGE_START, RANGE_END)
     question = f'{num_1} {num_2}'
-    # get greatest common divisor
     answer = str(gcd(num_1, num_2))
     return (question, answer)
